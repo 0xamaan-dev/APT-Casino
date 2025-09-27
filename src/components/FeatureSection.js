@@ -59,6 +59,7 @@ export default function FeatureSection() {
                   fill
                   className="object-cover rounded-xl"
                   priority
+                  unoptimized
                   onError={() => setImageError(true)}
                 />
               ) : (

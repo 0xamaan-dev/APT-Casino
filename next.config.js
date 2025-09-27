@@ -3,11 +3,8 @@ const nextConfig = {
   transpilePackages: ['three'],
   images: {
     domains: ['images.unsplash.com'],
-    unoptimized: true, // Enable for static images
+    unoptimized: true, // Disable Next.js image optimization for Vercel
   },
-  // Ensure static assets are served correctly
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  trailingSlash: false,
   // Performance optimizations
   poweredByHeader: false,
   reactStrictMode: false, // Disable strict mode to prevent double-renders and potential issues
@@ -27,24 +24,6 @@ const nextConfig = {
           {
             key: 'Access-Control-Allow-Headers',
             value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
-          },
-        ],
-      },
-      {
-        source: '/fonts/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/images/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
