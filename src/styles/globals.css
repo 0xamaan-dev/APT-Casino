@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @import "./colors.css";
-@import "./fonts.css";
 @import "./shadows.css";
 @import "./components.css";
 @import "./navbar-fix.css";

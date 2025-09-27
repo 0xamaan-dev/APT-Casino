@@ -1,0 +1,6 @@
+# Vercel redirects for static assets
+/fonts/* /fonts/:splat 200
+/images/* /images/:splat 200
+/sounds/* /sounds/:splat 200
+/icons/* /icons/:splat 200
+/logos/* /logos/:splat 200

@@ -1,12 +1,9 @@
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
+import "@/styles/fonts.css";
 import Providers from "./providers";
 import Navbar from "@/components/Navbar.js";
 import Footer from "@/components/Footer";
 import GlobalWalletManager from "@/components/GlobalWalletManager";
-
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "APT Casino",
@@ -17,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body 
-        className={`${inter.className} overflow-x-hidden w-full`}
+        className="overflow-x-hidden w-full"
         suppressHydrationWarning={true}
       >
         <Providers>
